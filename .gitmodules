@@ -1,6 +1,0 @@
-[submodule "/home/josh/.config/awesome/battery-widget"]
-	path = /home/josh/.config/awesome/battery-widget
-	url = https://github.com/deficient/battery-widget.git
-[submodule "/home/josh/.config/nvim"]
-	path = /home/josh/.config/nvim
-	url = https://github.com/jchilds0/NvChad
