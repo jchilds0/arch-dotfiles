@@ -1,6 +1,3 @@
 [submodule ".config/awesome/battery-widget"]
 	path = .config/awesome/battery-widget
 	url = https://github.com/deficient/battery-widget.git
-[submodule ".config/nvim"]
-	path = .config/nvim
-	url = https://github.com/jchilds0/NvChad
