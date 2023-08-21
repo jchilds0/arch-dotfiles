@@ -5,7 +5,8 @@ M.disabled = {
         ["<C-h>"] = ""
     },
     n = {
-        ["<leader>v"] = ""
+        ["<leader>v"] = "",
+        ["<leader>h"] = ""
     }
 }
 
@@ -46,7 +47,7 @@ M.abc = {
         --misc
         ["<leader>gd"] = { "<cmd>lua vim.buf.declaration<CR>", "Goto Declaration"},
         ["<leader>gD"] = { "<cmd>lua vim.buf.definition<CR>", "Goto Definition"},
-        ["<leader>K"] = { "<cmd>lua vim.lsp.buf.hover<CR>", "Hover"},
+        ["<leader>K"]  = { "<cmd>lua vim.lsp.buf.hover<CR>", "Hover"},
         ["<leader>td"] = { "<cmd>lua vim.diagnostic.show()<CR>", "Diagnostic Show"},
         ["<leader>te"] = { "<cmd>lua vim.diagnostic.enable()<CR>", "Diagnostic Show"},
         --lsp picker
@@ -62,7 +63,7 @@ M.abc = {
         --vim picker 
         ["<leader>vb"] = { "<cmd>lua require('telescope.builtin').buffers()<CR>", "Buffers"},
         ["<leader>vk"] = { "<cmd>lua require('telescope.builtin').keymaps()<CR>", "Keymaps"},
-        ["<leader>vh"]= { "<cmd>lua require('telescope.builtin').command_history()<CR>", "Command History"},
+        ["<leader>vh"] = { "<cmd>lua require('telescope.builtin').command_history()<CR>", "Command History"},
         ["<leader>vsh"]= { "<cmd>lua require('telescope.builtin').search_history()<CR>", "Search History"},
         ["<leader>vm"] = { "<cmd>lua require('telescope.builtin').marks()<CR>", "Marks"},
         ["<leader>vq"] = { "<cmd>lua require('telescope.builtin').quickfix()<CR>", "Quickfix List"},
@@ -72,6 +73,17 @@ M.abc = {
         ["<leader>vd"] = { "<cmd>lua require('diffview').file_history()<CR>", "Diff View Current File"},
         ["<leader>vo"] = { "<cmd>lua require('diffview').open()<CR>", "Diff View Open"},
         ["<leader>vc"] = { "<cmd>lua require('diffview').close()<CR>", "Diff View Close"},
+        ["<leader>vt"] = { function() require("nvterm.terminal").new "vertical" end, "New vertical term"},
+        -- harpoon
+        ["<leader>ht"] = { function() require("nvterm.terminal").new "horizontal" end, "New horizontal term"},
+        ["<leader>hv"] = { "<cmd>Telescope harpoon marks<CR>", "Harpoon marks show"},
+        ["<leader>hm"] = { "<cmd>lua require('harpoon.ui').toggle_quick_menu()<CR>", "Harpoon quick menu"},
+        ["<leader>hf"] = { "<cmd>lua require('harpoon.mark').add_file()<CR>", "Harpoon add file"},
+        ["<C-1>"]      = { "<cmd>lua require('harpoon.ui').nav_file(1)<CR>", "Harpoon nav file 1"},
+        ["<C-2>"]      = { "<cmd>lua require('harpoon.ui').nav_file(2)<CR>", "Harpoon nav file 2"},
+        ["<C-3>"]      = { "<cmd>lua require('harpoon.ui').nav_file(3)<CR>", "Harpoon nav file 3"},
+        ["<C-4>"]      = { "<cmd>lua require('harpoon.ui').nav_file(4)<CR>", "Harpoon nav file 4"},
+
     },
 
     v = {
