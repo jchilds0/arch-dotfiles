@@ -2,6 +2,8 @@
 set tabstop=4
 set shiftwidth=4
 
+set spell spelllang=en_us
+
 " Vimtex
 
 " This is necessary for VimTeX to load properly. The "indent" is optional.
