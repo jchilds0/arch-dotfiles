@@ -8,6 +8,12 @@ Window Manager: awesome-wm
 Terminal: xterm
 Fonts: ttf-jetbrains-mono, ttf-jetbrains-mono-nerd
 Editor: NvChad
+
+```
+# Create a symlink in nvim for config
+ln -s ~/nvim-config/ .config/nvim/lua/custom
+```
+
 Tools: gcc fzf vifm nvim
 
 Clone dotfiles 
