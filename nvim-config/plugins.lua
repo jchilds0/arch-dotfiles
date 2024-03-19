@@ -33,7 +33,7 @@ local plugins = {
         'mfussenegger/nvim-dap-python',
         lazy = false,
         config = function()
-            require('dap-python').setup('~/Documents/Honours-Research-Project/development/SnapPy/venv/bin/python')
+            require('dap-python').setup('~/Documents/projects/aoc2023/venv/bin/python')
         end,
     },
     {
@@ -42,6 +42,11 @@ local plugins = {
         config = function()
             require('dap-go').setup()
         end,
+    },
+    {
+        "mfussenegger/nvim-jdtls",
+        lazy = false,
+        dependencies = {'mfussenegger/nvim-dap'},
     },
     {
         "neovim/nvim-lspconfig",
@@ -154,7 +159,7 @@ local plugins = {
         config = function() 
             require'treesitter-context'.setup{
                 enable = true, -- Enable this plugin (Can be enabled/disabled later via commands)
-                max_lines = 0, -- How many lines the window should span. Values <= 0 mean no limit.
+                max_lines = 5, -- How many lines the window should span. Values <= 0 mean no limit.
                 min_window_height = 0, -- Minimum editor window height to enable context. Values <= 0 mean no limit.
                 line_numbers = true,
                 multiline_threshold = 20, -- Maximum number of lines to collapse for a single context line
@@ -178,6 +183,10 @@ local plugins = {
     },
     {
         "nvim-tree/nvim-web-devicons",
+    },
+    {
+        "christoomey/vim-tmux-navigator",
+        lazy = false,
     },
 }
 

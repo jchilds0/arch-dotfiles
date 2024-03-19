@@ -5,6 +5,8 @@ vim.cmd('set rnu!')
 vim.opt.colorcolumn = "118"
 vim.diagnostic.config({ virtual_text = true })
 
+vim.api.nvim_create_autocmd("FileType", { pattern = "ui", command = "setlocal shiftwidth=2 tabstop=2" })
+
 -- illuminate 
 
 vim.api.nvim_set_hl(0, "IlluminatedWordText", { link = "Visual" })

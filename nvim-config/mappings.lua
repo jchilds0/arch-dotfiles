@@ -12,6 +12,13 @@ M.disabled = {
 
 M.abc = {
     n = {
+        -- tmux 
+        ["<C-h>"] = { "<cmd> TmuxNavigateLeft<CR>", "window left" },
+        ["<C-l>"] = { "<cmd> TmuxNavigateRight<CR>", "window right" },
+        ["<C-j>"] = { "<cmd> TmuxNavigateDown<CR>", "window down" },
+        ["<C-k>"] = { "<cmd> TmuxNavigateUp<CR>", "window up" },
+
+
         -- debugger
         ["<leader>dR"] = { "<cmd>lua require'dap'.run_to_cursor()<cr>", "Run to Cursor" },
         ["<leader>dE"] = { "<cmd>lua require'dapui'.eval(vim.fn.input '[Expression] > ')<cr>", "Evaluate Input" },

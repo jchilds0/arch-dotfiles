@@ -21,7 +21,9 @@ M.configurations = {
                 return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
             end,
             stopOnEntry = false,
-            args = {},
+            args = function()
+                return {vim.fn.input('Args: ')}
+            end,
         }
     },
 }

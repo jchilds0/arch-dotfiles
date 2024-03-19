@@ -9,7 +9,7 @@ local awful = require("awful")
 awful.spawn.with_shell("xdotool mousemove 5000 0")
 
 awful.spawn("discord", { screen = 2, tag = "1" })
-awful.spawn("spot", { screen = 2, tag = "1" })
+awful.spawn("spotify", { screen = 2, tag = "1" })
 
 awful.spawn("xairedit", { screen = 2, tag = "2" })
 awful.spawn("pavucontrol", { screen = 2, tag = "3" })
