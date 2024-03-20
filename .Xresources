@@ -2,6 +2,8 @@ XTerm*termName: xterm-256color
 XTerm.vt100.loginShell: true
 XTerm.vt100.scrollTtyOutput: false
 
+XTerm.vt100.Translations: <Key>Backspace: string(0x08)
+
 ! Dracula Xresources palette
 XTerm.vt100.foreground: #F8F8F2
 XTerm.vt100.background: #282A36
