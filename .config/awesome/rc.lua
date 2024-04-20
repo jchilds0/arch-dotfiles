@@ -165,6 +165,21 @@ end
 -- Re-set wallpaper when a screen's geometry changes (e.g. different resolution)
 screen.connect_signal("property::geometry", set_wallpaper)
 
+-- custom config
+
+local cpuInfo = io.popen("lscpu | grep 'Model name: ' | sed 's/Model name: \\ * //'"):read("*a")
+local extra_widgets = {}
+
+if (cpuInfo == "Intel(R) Core(TM) i7-7700K CPU @ 4.20GHz\n") then
+    dofile(gears.filesystem.get_configuration_dir() .. "startup.lua")
+else
+    local power = require('power_widget')
+    power.gui_client = 'xfce4-power-manager-settings'
+    power.critical_percentage = 18
+
+    local pulse = require('pulseaudio_widget')
+    extra_widgets = { power, pulse }
+end
 
 awful.screen.connect_for_each_screen(function(s)
     -- Wallpaper
@@ -214,8 +229,8 @@ awful.screen.connect_for_each_screen(function(s)
             layout = wibox.layout.fixed.horizontal,
             mykeyboardlayout,
             wibox.widget.systray(),
-            pulse,
-            power,
+            extra_widgets[1],
+            extra_widgets[2],
             mytextclock,
             s.mylayoutbox,
         },
@@ -586,16 +601,3 @@ client.connect_signal("focus", function(c) c.border_color = beautiful.border_foc
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
 
--- custom config
-
-local cpuInfo = io.popen("lscpu | grep 'Model name: ' | sed 's/Model name: \\ * //'"):read("*a")
-
-if (cpuInfo == "Intel(R) Core(TM) i7-7700K CPU @ 4.20GHz\n") then
-    dofile(gears.filesystem.get_configuration_dir() .. "startup.lua")
-else
-    local power = require('power_widget')
-    power.gui_client = 'xfce4-power-manager-settings'
-    power.critical_percentage = 18
-
-    local pulse = require('pulseaudio_widget')
-end

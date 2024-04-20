@@ -6,8 +6,12 @@ local plugins = {
     },
     {
         "rcarriga/nvim-dap-ui",
+        dependencies = {
+            "mfussenegger/nvim-dap",
+            "nvim-neotest/nvim-nio",
+        },
         config = function()
-            require("dapui").setup()
+            require("dapui").setup({})
             vim.keymap.set("n", "<leader>du", require("dapui").toggle)
         end,
     },
@@ -33,7 +37,7 @@ local plugins = {
         'mfussenegger/nvim-dap-python',
         lazy = false,
         config = function()
-            require('dap-python').setup('~/Documents/projects/aoc2023/venv/bin/python')
+            require('dap-python').setup('~/Documents/projects/gfa-scroller-script/venv/bin/python')
         end,
     },
     {
