@@ -22,5 +22,11 @@ alias onedrive-pictures='rclone sync --interactive /media/photos/3.\ Collections
 export GEM_HOME="$(gem env user_gemhome)"
 export PATH="$PATH:$GEM_HOME/bin"
 
+# haskell
+export PATH="$HOME/.cabal/bin:$HOME/.ghcup/bin:$PATH"
+
+# go 
+export PATH="$HOME/go/bin:$PATH"
+
 # fzf 
 eval "$(fzf --bash)"
