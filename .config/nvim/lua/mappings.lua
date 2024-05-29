@@ -56,6 +56,7 @@ map("n", "<leader>ls", "<cmd>lua require('telescope.builtin').lsp_document_symbo
 map("n", "<leader>lu", "<cmd>lua require('telescope.builtin').lsp_references()<CR>", { desc = "References" })
 map("n", "<leader>ts", "<cmd>lua require('telescope.builtin').treesitter()<CR>", { desc = "Treesitter Symbols" })
 map("n", "<leader>lv", "<cmd>lua require('symbols-outline').toggle_outline()<CR>", { desc = "Structure" })
+map("n", "<leader>lf", "<cmd>lua vim.diagnostic.open_float()<CR>", { desc = "Open Float" })
 
 -- git pic<leader>ker
 map("n", "<leader>gb", "<cmd>lua require('telescope.builtin').git_branches()<CR>", { desc = "Git Branches" })
