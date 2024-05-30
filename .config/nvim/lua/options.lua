@@ -12,9 +12,14 @@ vim.cmd('set rnu!')
 vim.opt.colorcolumn = "118"
 vim.diagnostic.config({ virtual_text = true })
 
---vim.api.nvim_create_autocmd("FileType", { pattern = "*.ui", command = "setlocal shiftwidth=2 tabstop=2" })
+vim.api.nvim_create_autocmd("BufRead", { pattern = "*.ui", command = ":setlocal shiftwidth=2 tabstop=2" })
 
-vim.api.nvim_create_autocmd("BufWritePost", { pattern = "*.go", command = "silent! :!gofmt -e -w %" })
+vim.api.nvim_create_autocmd("BufWritePre", {
+    pattern = "*.go",
+    callback = function ()
+        vim.lsp.buf.format({ async = false })
+    end
+})
 
 -- illuminate 
 

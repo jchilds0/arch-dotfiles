@@ -42,6 +42,7 @@ map("n", "<F9>", "<cmd>lua require'dap'.continue()<cr>", { desc = "Continue" })
 map("n", "<leader>rb", "<cmd>lua require('refactoring').refactor('Extract Block')<CR>", { desc = "Extract Block" })
 map("n", "<leader>rb", "<cmd>lua require('refactoring').refactor('Extract Block To File')<CR>", { desc = "Extract Block To File" })
 map("n", "<leader>ri", "<cmd>lua require('refactoring').refactor('Inline Variable')<CR>", { desc = "Inline Variable" })
+map("n", "<leader>rn", function() return ":IncRename " .. vim.fn.expand("<cword>") end, { expr = true })
 
 -- misc
 map("n", "<leader>gd", "<cmd>lua vim.buf.declaration<CR>", { desc = "Goto Declaration" })
