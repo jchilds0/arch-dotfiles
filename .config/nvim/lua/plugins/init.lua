@@ -141,4 +141,17 @@ return {
             require('telescope').load_extension('harpoon')
         end,
     },
+    {
+        "williamboman/mason.nvim",
+        opts = {
+            ensure_installed = {
+                -- lsps
+                "lua-language-server", "clangd", "gopls", "ltex-ls", "texlab",
+                "haskell-language-server",
+
+                -- debugger
+                "codelldb", "debugpy", "go-debug-adapter", "haskell-debug-adapter"
+            }
+        }
+    },
 }
