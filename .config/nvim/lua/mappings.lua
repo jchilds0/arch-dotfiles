@@ -52,7 +52,7 @@ map("n", "<leader>td", "<cmd>lua vim.diagnostic.show()<CR>", { desc = "Diagnosti
 map("n", "<leader>te", "<cmd>lua vim.diagnostic.enable()<CR>", { desc = "Diagnostic Show" })
 
 -- lsp pic<leader>ket
-map("n", "<leader>ld", "<cmd>lua require('picker').diagnostics()<CR>", { desc = "Diagnostic" })
+map("n", "<leader>ld", "<cmd>Telescope diagnostics<CR>", { desc = "Diagnostic" })
 map("n", "<leader>ls", "<cmd>lua require('telescope.builtin').lsp_document_symbols()<CR>", { desc = "Symbols" })
 map("n", "<leader>lu", "<cmd>lua require('telescope.builtin').lsp_references()<CR>", { desc = "References" })
 map("n", "<leader>ts", "<cmd>lua require('telescope.builtin').treesitter()<CR>", { desc = "Treesitter Symbols" })
