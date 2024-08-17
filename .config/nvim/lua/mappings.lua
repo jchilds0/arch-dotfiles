@@ -94,3 +94,4 @@ map("v", "<leader>re", "<Esc><cmd>lua require('refactoring').refactor('Extract F
 map("v", "<leader>rf", "<Esc><cmd>lua require('refactoring').refactor('Extract Function To File')<CR>", { desc = "Extract Function To File"})
 map("v", "<leader>rv", "<Esc><cmd>lua require('refactoring').refactor('Extract Variable')<CR>", { desc = "Extract Variable"})
 map("v", "<leader>ri", "<Esc><cmd>lua require('refactoring').refactor('Inline Variable')<CR>", { desc = "Inline Variable"})
+

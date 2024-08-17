@@ -35,6 +35,13 @@ return {
         end,
     },
     {
+        "mfussenegger/nvim-jdtls",
+        lazy = false,
+        dependencies = {
+            "mfussenegger/nvim-dap",
+        },
+    },
+    {
         'mfussenegger/nvim-dap-python',
         lazy = false,
         config = function()
@@ -107,6 +114,7 @@ return {
 
                 -- low level
                 "c",
+                "rust",
                 "latex",
                 "zig",
                 "go"
@@ -147,7 +155,7 @@ return {
             ensure_installed = {
                 -- lsps
                 "lua-language-server", "clangd", "gopls", "ltex-ls", "texlab",
-                "haskell-language-server",
+                "haskell-language-server", "rust-analyzer",
 
                 -- debugger
                 "codelldb", "debugpy", "go-debug-adapter", "haskell-debug-adapter"

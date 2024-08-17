@@ -28,5 +28,11 @@ export PATH="$HOME/.cabal/bin:$HOME/.ghcup/bin:$PATH"
 # go 
 export PATH="$HOME/go/bin:$PATH"
 
+# openjfx
+export PATH_TO_FX="$HOME/Downloads/openjfx/javafx-sdk-22.0.2/lib/"
+
+# maven
+export PATH="$PATH:$HOME/Downloads/apache-maven-3.9.8/bin/"
+
 # fzf 
 eval "$(fzf --bash)"
