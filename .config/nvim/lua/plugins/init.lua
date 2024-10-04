@@ -151,16 +151,6 @@ return {
     },
     {
         "williamboman/mason.nvim",
-        opts = {
-            ensure_installed = {
-                -- lsps
-                "lua-language-server", "clangd", "gopls", "ltex-ls", "texlab",
-                "haskell-language-server", "rust-analyzer",
-
-                -- debugger
-                "codelldb", "debugpy", "go-debug-adapter", "haskell-debug-adapter"
-            }
-        }
     },
     {
         "mrcjkb/rustaceanvim",

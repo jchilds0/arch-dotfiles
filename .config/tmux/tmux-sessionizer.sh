@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-selected=$(find ~/Documents/UniMelb-2024/ ~/Documents/projects/ -mindepth 1 -maxdepth 1 -type d | fzf --tmux 100% --border none)
+selected=$(find ~/Documents/UniMelb-2024/ ~/programming/ -mindepth 1 -maxdepth 1 -type d | fzf --tmux 100% --border none)
 
 if [[ -z $selected ]]; then
     exit 0

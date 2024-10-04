@@ -166,7 +166,6 @@ end
 screen.connect_signal("property::geometry", set_wallpaper)
 
 -- custom config
-
 local cpuInfo = io.popen("lscpu | grep 'Model name: ' | sed 's/Model name: \\ * //'"):read("*a")
 local extra_widgets = {}
 
