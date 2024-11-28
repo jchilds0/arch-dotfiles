@@ -29,7 +29,7 @@ window#waybar.hidden {
 	margin-left: 20px;
 	font-size: 12px;
 	margin-bottom: 0px;
-	border-radius: 16px;
+	border-radius: 8px;
 	background: #161320;
 	transition: none;
 }
@@ -39,7 +39,7 @@ window#waybar.hidden {
 	color: #B5E8E0;
 	background: transparent;
 	font-size: 16px;
-	border-radius: 6px;
+	border-radius: 8px;
 }
 
 #workspaces button.occupied {
@@ -136,9 +136,11 @@ window#waybar.hidden {
 	color: #161320;
 	background: #F8BD96;
 }
+
 #clock {
 	margin-top: 6px;
 	margin-left: 8px;
+    margin-right: 20px;
 	padding-left: 10px;
 	padding-right: 10px;
 	margin-bottom: 0px;
@@ -182,6 +184,18 @@ window#waybar.hidden {
 	transition: none;
 	color: #B5E8E0;
 	background: #161320;
+}
+
+#custom-screenshot {
+	font-size: 24px;
+	margin-top: 6px;
+	margin-left: 8px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 10px;
+	transition: none;
+    color: #89DCEB;
+    background: #161320;
 }
 
 #custom-launcher {

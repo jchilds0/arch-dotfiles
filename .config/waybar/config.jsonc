@@ -2,7 +2,7 @@
 	"layer": "top",
 	"modules-left": ["hyprland/workspaces"],
 	"modules-center": [],
-	"modules-right": ["network", "cpu","memory","pulseaudio","clock"],
+	"modules-right": ["tray", "custom/screenshot", "custom/launcher", "cpu","memory","pulseaudio","clock"],
 	
 	"pulseaudio": {
 		"tooltip": false,
@@ -29,11 +29,19 @@
             "16": "8"
         }
     },
-	"network": {
-		"tooltip": false,
-		"format-wifi": "  {essid}",
-		"format-ethernet": ""
-	},
+    "tray": {
+        // "icon-size": 21,
+        "spacing": 10
+    },
+    "custom/screenshot":{
+        "format": "⎙",
+        "on-click": "grim -g \"$(slurp)\""
+    },
+    "custom/launcher":{
+        "format": " ",
+        "on-click": "wofi --show drun",
+        "on-click-right": "killall wofi"
+    },
     "clock": {
         "format": " {:%I:%M %p   %d/%m/%Y}"
     },
