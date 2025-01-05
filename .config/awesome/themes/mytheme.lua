@@ -22,15 +22,6 @@ theme.bg_focus      = "#189AB4"
 theme.fg_focus      = "#FFFFFF"
 
 theme.bg_systray    = theme.bg_normal
-
-local cpuInfo = io.popen("lscpu | grep 'Model name: ' | sed 's/Model name: \\ * //'"):read("*a")
-
-if (cpuInfo == "Intel(R) Core(TM) i7-7700K CPU @ 4.20GHz\n") then
-    theme.useless_gap   = dpi(0)
-else
-    theme.useless_gap   = dpi(10)
-end
-
 theme.border_width  = dpi(0)
 theme.border_normal = "#000000"
 theme.border_focus  = "#535d6c"

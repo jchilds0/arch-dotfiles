@@ -2,7 +2,7 @@
 	"layer": "top",
 	"modules-left": ["hyprland/workspaces"],
 	"modules-center": [],
-	"modules-right": ["tray", "custom/screenshot", "custom/launcher", "cpu","memory","pulseaudio","clock"],
+	"modules-right": ["tray", "custom/screenshot", "custom/launcher", "battery", "cpu","memory","pulseaudio","clock"],
 	
 	"pulseaudio": {
 		"tooltip": false,
@@ -16,18 +16,10 @@
 	},
 
     "hyprland/workspaces": {
-        "all-outputs": false,
-        "format": "{icon}",
-        "format-icons": {
-            "9": "1",
-            "10": "2",
-            "11": "3",
-            "12": "4",
-            "13": "5",
-            "14": "6",
-            "15": "7",
-            "16": "8"
-        }
+        "persistent-workspaces": {
+            "*": 10
+        },
+        "format": "{icon}"
     },
     "tray": {
         // "icon-size": 21,
@@ -54,5 +46,17 @@
         "interval": 30,
         "format": " {}%",
         "max-length": 10
+    },
+    "battery": {
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 20
+        },
+        "format": "{icon} {capacity}",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-alt": "{time} {icon}",
+        "format-icons": ["", "", "", "", ""]
     }
 }
