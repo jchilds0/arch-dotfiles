@@ -1,6 +1,5 @@
 xinput set-prop 'ELAN0644:00 04F3:31AD Touchpad' "libinput Natural Scrolling Enabled" 1
 xinput set-prop 'ELAN0644:00 04F3:31AD Touchpad' "libinput Tapping Enabled" 1
-xinput set-prop 'Logitech Gaming Mouse G402' "libinput Accel Speed" -1
 echo "awesome.emit_signal('layout::set', awesome.layout.layouts[1])" | awesome-client
 picom -b
 nm-applet &
