@@ -45,8 +45,8 @@ map("n", "<leader>ri", "<cmd>lua require('refactoring').refactor('Inline Variabl
 map("n", "<leader>rn", function() return ":IncRename " .. vim.fn.expand("<cword>") end, { expr = true })
 
 -- misc
-map("n", "<leader>gd", "<cmd>lua vim.buf.declaration<CR>", { desc = "Goto Declaration" })
-map("n", "<leader>gD", "<cmd>lua vim.buf.definition<CR>", { desc = "Goto Definition" })
+map("n", "<leader>gd", "<cmd>lua vim.lsp.buf.declaration()<CR>", { desc = "Goto Declaration" })
+map("n", "<leader>gD", "<cmd>lua vim.lsp.buf.definition()<CR>", { desc = "Goto Definition" })
 map("n", "<leader>K", "<cmd>lua vim.lsp.buf.hover<CR>", { desc = "Hover" })
 map("n", "<leader>td", "<cmd>lua vim.diagnostic.show()<CR>", { desc = "Diagnostic Show" })
 map("n", "<leader>te", "<cmd>lua vim.diagnostic.enable()<CR>", { desc = "Diagnostic Show" })

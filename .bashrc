@@ -39,6 +39,9 @@ export PATH_TO_FX="$HOME/Downloads/openjfx/javafx-sdk-22.0.2/lib/"
 # maven
 export PATH="$PATH:$HOME/Downloads/apache-maven-3.9.8/bin/"
 
+# zathura
+# export ZATHURA_PLUGINS_PATH=/usr/lib/zathura
+
 # fzf 
 eval "$(fzf --bash)"
 
