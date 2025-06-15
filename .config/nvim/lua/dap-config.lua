@@ -27,7 +27,11 @@ M.configurations = {
             end,
             stopOnEntry = false,
             args = function()
-                return {vim.fn.input('Args: ')}
+                local t = {}
+                for str in string.gmatch(vim.fn.input("Args: "), "([^%s]+)") do
+                    table.insert(t, str)
+                end
+                return t
             end,
         }
     },
