@@ -172,12 +172,12 @@ local extra_widgets = {}
 if (cpuInfo == "Intel(R) Core(TM) i7-7700K CPU @ 4.20GHz\n") then
     dofile(gears.filesystem.get_configuration_dir() .. "startup.lua")
 else
-    local power = require('power_widget')
-    power.gui_client = 'xfce4-power-manager-settings'
-    power.critical_percentage = 18
-
-    local pulse = require('pulseaudio_widget')
-    extra_widgets = { power, pulse }
+    -- local power = require('power_widget')
+    -- power.gui_client = 'xfce4-power-manager-settings'
+    -- power.critical_percentage = 18
+    --
+    -- local pulse = require('pulseaudio_widget')
+    -- extra_widgets = { power, pulse }
 end
 
 awful.screen.connect_for_each_screen(function(s)
