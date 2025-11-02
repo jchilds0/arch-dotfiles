@@ -44,3 +44,11 @@ eval "$(fzf --bash)"
 
 # bambulab
 alias bambu-studio-mesa='__GLX_VENDOR_LIBRARY_NAME=mesa __EGL_VENDOR_LIBRARY_FILENAMES=/usr/share/glvnd/egl_vendor.d/50_mesa.json bambu-studio'
+
+# raspberry pi 
+export PICO_SDK_PATH=$HOME/software/pico/pico-sdk/
+
+# esp32 
+alias get_idf='. $HOME/software/esp-idf/export.sh'
+
+# export DEBUGINFOD_URLS="https://debuginfod.archlinux.org"

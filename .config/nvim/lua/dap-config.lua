@@ -38,6 +38,30 @@ M.configurations = {
             end,
         }
     },
+    cpp = {
+        {
+            name = 'Launch',
+            type = 'lldb',
+            request = 'launch',
+            cwd = function()
+                return vim.fn.input('Working Directory: ', vim.fn.getcwd() .. '/', 'file')
+            end,
+            program = function()
+                return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
+            end,
+            stopOnEntry = false,
+            args = function()
+                local input = vim.fn.input('Args: ')
+                local as = {}
+
+                for str in string.gmatch(input, "([^%s]+)") do
+                    table.insert(as, str)
+                end
+
+                return as
+            end,
+        }
+    },
     haskell = {
         {
             type = 'haskell',
